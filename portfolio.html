@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</head>
+<body>
+    <div class="galaxy-background">
+        <div class="stars" id="stars-container"></div>
+    </div>
+
+    <div class="navigation">
+        <ul class="navigation-ul">
+            <li class="list active">
+                <a href="#Home">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#About">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="text">About</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#Projects">
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>
+                    <span class="text">Projects</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#Contact">
+                    <span class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></span>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section id="home">
+            <div class="photo-frame">
+                <img src="projects screen - Copy\ezzoubair3.png" alt="Your Profile Picture">
+            </div>
+            <h1>Your Name</h1>
+            <p>Welcome to my portfolio! I'm a passionate developer skilled in creating modern and functional websites and applications. Explore my work and feel free to get in touch.</p>
+        </section>
+
+        <section id="about">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="about-photo">
+                    <img src="projects screen - Copy/ezzoubair2.png" alt="About Me Photo">
+                </div>
+                <div class="about-text">
+                    <p>Hey there! I'm Ezzoubair Tamri, a passionate Frontend Developer with expertise in modern web technologies such as React, TypeScript, Tailwind CSS, and Node.js. My background in Data Analytics with Python allows me to build efficient, data-driven applications.</p>
+                </div>
+                <div class="skills-circle" id="skillsCircle">
+                    <div class="skill" data-skill="React">Python</div>
+                    <br>
+                    <div class="skill" data-skill="TypeScript">HTML</div>
+                    <br>
+                    <div class="skill" data-skill="Tailwind CSS"> CSS</div>
+                    <br>
+                    <div class="skill" data-skill="Node.js">Java Script</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>My Projects</h1>
+            <div class="projects-container" id="projectsContainer">
+                <div class="project-card">
+                    <img src="projects screen - Copy\Docplanner - Modern Design - Google Chrome 2_10_2025 6_52_02 PM (1).png" alt="Project 1">
+                    
+                </div>
+                <div class="project-card">
+                    <img src="projects screen - Copy\calculator.png" alt="Project 2">
+                    
+                </div>
+                <div class="project-card">
+                    <img src="projects screen - Copy\shoping-cart.png" alt="Project 3">
+                    
+                </div>
+                <div class="project-card">
+                  <img src="projects screen - Copy\Temperature Converter 2_10_2025 6_41_47 PM.png" alt="Project 3">
+                  
+              </div>
+              <div class="project-card">
+                <img src="projects screen - Copy\To-Do List - Google Chrome 2_10_2025 6_35_13 PM.png" alt="Project 3">
+                
+            </div>
+            <div class="project-card">
+              <img src="projects screen - Copy\Sign Up - Google Chrome 2_24_2025 2_56_10 PM.png" alt="Project 3">
+              
+          </div>
+          <div class="project-card">
+            <img src="projects screen - Copy\Simple Quiz - Google Chrome 2_10_2025 6_37_46 PM.png" alt="Project 3">
+            <
+        </div>
+        <div class="project-card">
+          <img src="projects screen - Copy\TIC-ZBIRAWI 2_24_2025 2_57_27 PM.png" alt="Project 3">
+          
+      </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Get In Touch</h1>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                </div>
+                <button class="submit-btn">Send Message</button>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/zbirawi" class="social-link">GitHub</a>
+                <a href="https://www.instagram.com/ezzoubair_tm?igsh=MTF5cjN0bGVibndxdA==" class="social-link">Instagram</a>
+                <a href="https://x.com/zbirawi1?s=11" class="social-link">Twitter</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+  
+</body>
+</html>

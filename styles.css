@@ -1,0 +1,588 @@
+:root {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d2dae2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.galaxy-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #04000c, #020224);
+    z-index: -2;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    animation: rotate 240s linear infinite;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Navigation Bar */
+.navigation {
+    position: fixed;
+    top: 10px; /* Places it at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 70px;
+    background-color: #1e272e;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navigation List */
+.navigation-ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Individual Items */
+.navigation-ul .list {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.navigation-ul .list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+/* Icon and Text */
+.navigation-ul .list .icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.navigation-ul .list .text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Curve Effect on Active Item */
+.navigation-ul .list.active a {
+    color: #00a8ff;
+}
+
+.navigation-ul .list.active::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    height: 10px;
+    background-color: #00a8ff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+/* Floating Effect */
+.navigation:hover {
+    transform: translateX(-50%) translateY(-10px); /* Moves up when hovered */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateX(-50%) translateY(0px); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+    100% { transform: translateX(-50%) translateY(0px); }
+}
+
+/* Smooth Animation when Clicking */
+.navigation-ul .list:active {
+    transform: scale(0.9);
+}
+
+.navigation {
+    animation: float 3s infinite ease-in-out; /* Makes it float slowly */
+}
+
+.navigation-ul {
+    display: flex;
+    width: 350px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navigation-ul .list {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-ul .list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.navigation-ul .list .icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.navigation-ul .list .text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navigation-ul .list.active a {
+    color: #00a8ff;
+}
+
+ /* Home Section */
+ #home {
+    text-align: center;
+  }
+  
+  .photo-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    border: 3px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .intro {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.2rem;
+  }
+  
+  /* About Section */
+  #about {
+    position: relative;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 3px solid white;
+  }
+  
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-text {
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+ 
+  
+ 
+  
+  /* Contact Section */
+  #contact {
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(135deg, #6b5b95, #4e4376);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 91, 149, 0.4);
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav {
+      padding: 10px;
+    }
+    
+    .nav a {
+      padding: 8px 15px;
+      margin: 0 5px;
+      font-size: 1rem;
+    }
+    
+    section {
+      padding: 80px 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .skills-circle {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .skill {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .project-card {
+      width: 1920px;
+      height: 1032px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav a {
+      padding: 6px 10px;
+      margin: 0 3px;
+      font-size: 0.9rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .skills-circle {
+      width: 220px;
+      height: 220px;
+    }
+    
+    .skill {
+      width: 50px;
+      height: 50px;
+      font-size: 0.9rem;
+    }
+    
+    .projects-container {
+      gap: 15px;
+    }
+    
+    .project-card {
+      width: 180px;
+      height: 220px;
+    }
+  }
+
+  /* Home Section Photo Frame Styles */
+#home .photo-frame {
+    width: 350px;  /* Increased from 200px */
+    height: 350px; /* Increased from 200px */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    border: 5px solid white; /* Slightly thicker border */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #home .photo-frame:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7);
+  }
+  
+  #home .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Ensure image is centered */
+  }
+  
+  /* Adjust spacing for other elements in home section */
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px; /* Add more top padding */
+  }
+  
+  #home .intro {
+    max-width: 800px; /* Wider intro text */
+    margin: 30px auto; /* More space around intro */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #home .photo-frame {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #home .photo-frame {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  p{
+    color: aliceblue;
+  }
+  h1{
+    color: aliceblue;
+  }
+  label{
+    color: aliceblue;
+  }
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+    background: linear-gradient(45deg, #ff4500, #ff6347);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill::before {
+    content: "🔥";
+    position: absolute;
+    left: -30px;
+    opacity: 0;
+    font-size: 2em;
+    transition: left 0.3s ease, opacity 0.3s ease;
+}
+
+.skill::after {
+    content: "🔥";
+    position: absolute;
+    right: -30px;
+    opacity: 0;
+    font-size: 2em;
+    transition: right 0.3s ease, opacity 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 1);
+}
+
+.skill:hover::before {
+    left: 5px;
+    opacity: 1;
+}
+
+.skill:hover::after {
+    right: 5px;
+    opacity: 1;
+}
+
+/* Spicy Theme for Each Skill */
+.skill[data-skill="React"] {
+    background: linear-gradient(45deg, #61dafb, #2196F3);
+    box-shadow: 0 0 10px #2196F3;
+}
+
+.skill[data-skill="TypeScript"] {
+    background: linear-gradient(45deg, #007acc, #005ea1);
+    box-shadow: 0 0 10px #005ea1;
+}
+
+.skill[data-skill="Tailwind CSS"] {
+    background: linear-gradient(45deg, #38b2ac, #2c7a7b);
+    box-shadow: 0 0 10px #2c7a7b;
+}
+
+.skill[data-skill="Node.js"] {
+    background: linear-gradient(45deg, #68a063, #4f8a5d);
+    box-shadow: 0 0 10px #4f8a5d;
+}
+
+
+ /* Projects Section */
+ #projects {
+  padding-top: 120px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  width: 500px;
+  height: 269px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  color: white;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  transform: translateY(0);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
